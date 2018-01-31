@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BF5913B-F3A5-429E-AE4E-395CA8DFFD67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ForDev</RootNamespace>
+    <AssemblyName>ForDev</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publier\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ForDev.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logoForDevjpg.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.3.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.3.0.3\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassManager\ManagerAddTopic.cs" />
+    <Compile Include="ClassManager\ManagerFormProfil.cs" />
+    <Compile Include="ClassManager\ManagerLogged.cs" />
+    <Compile Include="ClassManager\ManagerLogin\ManagerLogin.cs" />
+    <Compile Include="ClassManager\ManagerLogin\PersonConnectedEventArgs.cs" />
+    <Compile Include="ClassManager\ManagerMessage\DeleteMessageEventArg.cs" />
+    <Compile Include="ClassManager\ManagerMessage\ManagerMessage.cs" />
+    <Compile Include="ClassManager\ManagerRichTextBox\AddMessageEventArgs.cs" />
+    <Compile Include="ClassManager\ManagerRichTextBox\ManagerRichTextBox.cs" />
+    <Compile Include="ClassManager\ManagerRubric\LoadRubricEventArgs.cs" />
+    <Compile Include="ClassManager\ManagerRubric\ManagerRubric.cs" />
+    <Compile Include="ClassManager\ManagerTopic\LoadTopicEventArgs.cs" />
+    <Compile Include="ClassManager\ManagerTopic\ManagerTopic.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcAddTopic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcAddTopic.Designer.cs">
+      <DependentUpon>UcAddTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcAddTopic1.Designer.cs">
+      <DependentUpon>UcAddTopic.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserControl\UcFormProfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcFormProfil.Designer.cs">
+      <DependentUpon>UcFormProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcFormProfil1.Designer.cs">
+      <DependentUpon>UcFormProfil.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserControl\UcLogged.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcLogged.Designer.cs">
+      <DependentUpon>UcLogged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcLogged1.Designer.cs">
+      <DependentUpon>UcLogged.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserControl\UcLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcLogin.Designer.cs">
+      <DependentUpon>UcLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcLogin1.Designer.cs">
+      <DependentUpon>UcLogin.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserControl\UcMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcMessage.Designer.cs">
+      <DependentUpon>UcMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcMessage1.Designer.cs">
+      <DependentUpon>UcMessage.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserControl\UcRichTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcRichTextBox.Designer.cs">
+      <DependentUpon>UcRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcRichTextBox1.Designer.cs">
+      <DependentUpon>UcRichTextBox.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserControl\UcRubric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcRubric.Designer.cs">
+      <DependentUpon>UcRubric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcRubric1.Designer.cs">
+      <DependentUpon>UcRubric.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserControl\UcTopic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTopic.Designer.cs">
+      <DependentUpon>UcTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTopic1.Designer.cs">
+      <DependentUpon>UcTopic.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UcAddTopic.resx">
+      <DependentUpon>UcAddTopic.cs</DependentUpon>
+      <LastGenOutput>UcAddTopic1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UcFormProfil.resx">
+      <DependentUpon>UcFormProfil.cs</DependentUpon>
+      <LastGenOutput>UcFormProfil1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UcLogged.resx">
+      <DependentUpon>UcLogged.cs</DependentUpon>
+      <LastGenOutput>UcLogged1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UcLogin.resx">
+      <DependentUpon>UcLogin.cs</DependentUpon>
+      <LastGenOutput>UcLogin1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UcMessage.resx">
+      <DependentUpon>UcMessage.cs</DependentUpon>
+      <LastGenOutput>UcMessage1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UcRichTextBox.resx">
+      <DependentUpon>UcRichTextBox.cs</DependentUpon>
+      <LastGenOutput>UcRichTextBox1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UcRubric.resx">
+      <DependentUpon>UcRubric.cs</DependentUpon>
+      <LastGenOutput>UcRubric1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UcTopic.resx">
+      <DependentUpon>UcTopic.cs</DependentUpon>
+      <LastGenOutput>UcTopic1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLinkLabelDecorate.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelRubric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Fermer la fenêtre-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-icone-8044-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-technology.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-agenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-computer-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\005-multimedia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006-computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\007-graphic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessClassPortable\BusinessClassPortable.csproj">
+      <Project>{BCAEE43F-0FD0-415F-8012-C75CF1E40A7A}</Project>
+      <Name>BusinessClassPortable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControllerClass\ControllerClass.csproj">
+      <Project>{e977d287-e7c0-46bd-b761-8dee0a523bd0}</Project>
+      <Name>ControllerClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncodingDll\EncodingDll.csproj">
+      <Project>{da7009ad-6b68-4da9-b3e2-40877f526d7f}</Project>
+      <Name>EncodingDll</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logoForDevjpg.ico" />
+    <None Include="Resources\LogoForDev.png" />
+    <None Include="Resources\DémarageForDev.png" />
+    <None Include="Resources\happy.png" />
+    <None Include="Resources\002-sign.png" />
+    <None Include="Resources\001-plus-black-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
